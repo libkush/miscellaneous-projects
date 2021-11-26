@@ -11,12 +11,13 @@
         position: absolute;
         background-color: black;
         display: grid;
-        margin: none;
+        margin: auto;
         padding: 0;
         gap: 2rem;
         top: 50%;
         left: 50%;
         transform: translate(-50%, -50%);
+        width: 75%;
       }
     </style>
   </head>
@@ -26,27 +27,17 @@
       style="
         display: grid;
         gap: 0.5rem;
-        width: 21rem;
+        width: 100%;
         grid-template-columns: repeat(2, minmax(0, 1fr));
       "
     >
       <textarea
-        style="
-          display: flex;
-          flex-direction: column;
-          width: 10rem;
-          height: 5rem;
-        "
+        style="display: flex; flex-direction: column; height: 5rem"
         id="plaintext"
         placeholder="Enter plain text here (to encode)"
       ></textarea>
       <textarea
-        style="
-          display: flex;
-          flex-direction: column;
-          width: 10rem;
-          height: 5rem;
-        "
+        style="display: flex; flex-direction: column; height: 5rem"
         id="tohide"
         placeholder="Enter text to hide here (to encode)"
       ></textarea>
@@ -58,7 +49,7 @@
       Encode
     </button>
     <textarea
-      style="display: flex; flex-direction: column; width: 20rem; height: 5rem"
+      style="display: flex; flex-direction: column; height: 5rem"
       id="encodedtext"
       placeholder="Enter encoded text here (to decode)"
     ></textarea>
@@ -69,7 +60,7 @@
       Decode
     </button>
     <textarea
-      style="display: flex; flex-direction: column; width: 20rem; height: 5rem"
+      style="display: flex; flex-direction: column; height: 5rem"
       id="result"
       placeholder="Result"
     ></textarea>
