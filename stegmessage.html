@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>StegMessage</title>
+    <script defer src="./unicode_steganography.js"></script>
+    <style>
+      body {
+        position: absolute;
+        background-color: black;
+        display: grid;
+        margin: none;
+        padding: 0;
+        gap: 2rem;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+      }
+    </style>
+  </head>
+  <body>
+    <h1 style="color: white">Hide text inside text</h1>
+    <div
+      style="
+        display: grid;
+        gap: 0.5rem;
+        width: 21rem;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      "
+    >
+      <textarea
+        style="
+          display: flex;
+          flex-direction: column;
+          width: 10rem;
+          height: 5rem;
+        "
+        id="plaintext"
+        placeholder="Enter plain text here (to encode)"
+      ></textarea>
+      <textarea
+        style="
+          display: flex;
+          flex-direction: column;
+          width: 10rem;
+          height: 5rem;
+        "
+        id="tohide"
+        placeholder="Enter text to hide here (to encode)"
+      ></textarea>
+    </div>
+    <button
+      id="encode"
+      style="height: 2rem; background-color: green; color: white"
+    >
+      Encode
+    </button>
+    <textarea
+      style="display: flex; flex-direction: column; width: 20rem; height: 5rem"
+      id="encodedtext"
+      placeholder="Enter encoded text here (to decode)"
+    ></textarea>
+    <button
+      id="decode"
+      style="height: 2rem; background-color: green; color: white"
+    >
+      Decode
+    </button>
+    <textarea
+      style="display: flex; flex-direction: column; width: 20rem; height: 5rem"
+      id="result"
+      placeholder="Result"
+    ></textarea>
+    <script>
+      document.getElementById("encode").addEventListener("click", function () {
+        var text1 = document.getElementById("plaintext").value;
+        var text2 = document.getElementById("tohide").value;
+        var stego = unicodeSteganographer.encodeText(text1, text2);
+        document.getElementById("result").value = stego;
+      });
+      document.getElementById("decode").addEventListener("click", function () {
+        var text1 = document.getElementById("encodedtext").value;
+        var stego = unicodeSteganographer.decodeText(text1);
+        document.getElementById("result").value = stego.hiddenText;
+      });
+    </script>
+  </body>
+</html>
