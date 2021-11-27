@@ -8,17 +8,14 @@
     <script defer src="./unicode_steganography.js"></script>
     <style>
       body {
-        position: absolute;
         background-color: black;
         display: grid;
         margin: auto;
-        padding: 0;
+        padding-top: 5%;
+        padding-bottom: 5%;
+        padding-left: 10%;
+        padding-right: 10%;
         gap: 1rem;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-        width: 75%;
-        overflow: scroll;
       }
     </style>
   </head>
@@ -32,12 +29,12 @@
       "
     >
       <textarea
-        style="display: flex; flex-direction: column; height: 9rem"
+        style="display: flex; flex-direction: column; height: 10rem"
         id="plaintext"
         placeholder="Enter plain text here (to encode)"
       ></textarea>
       <textarea
-        style="display: flex; flex-direction: column; height: 9rem"
+        style="display: flex; flex-direction: column; height: 10rem"
         id="tohide"
         placeholder="Enter the text that you want to hide inside plain text"
       ></textarea>
@@ -49,7 +46,7 @@
       Encode
     </button>
     <textarea
-      style="display: flex; flex-direction: column; height: 3rem"
+      style="display: flex; flex-direction: column; height: 5rem"
       id="encodedtext"
       placeholder="Enter encoded text here (to decode)"
     ></textarea>
@@ -73,6 +70,7 @@
     </h2>
     <article
       style="
+        overflow: scroll;
         padding: 0.5em;
         background-color: white;
         display: flex;
