@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Geography MAS Activity</title>
+    <style>
+      body {
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 14px;
+        background-color: rgb(56, 61, 66);
+        padding-top: 1rem;
+        color: rgb(255, 255, 255);
+        padding-right: 5rem;
+        padding-left: 5rem;
+        margin: auto;
+      }
+      main {
+        margin: auto;
+        display: grid;
+        gap: 5rem;
+        grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
+        width: 100%;
+      }
+
+      article {
+        display: flex;
+        flex-direction: column;
+        width: 500px;
+        align-items: center;
+        justify-content: center;
+        background-color: black;
+        border-radius: 1.5rem;
+        padding-top: 1rem;
+        transition-duration: 500ms;
+        box-shadow: rgb(38, 57, 77) 0px 40px 60px -20px;
+      }
+
+      .renewable {
+        background-image: url(./renewable.jpeg);
+        background-size: contain;
+        background-repeat: no-repeat;
+      }
+
+      .non-renewable {
+        background-image: url(./non-renewable.jpg);
+        background-size: contain;
+        background-repeat: no-repeat;
+      }
+
+      article:hover {
+        scale: 1.05;
+      }
+
+      h1 {
+        padding: 1rem;
+      }
+
+      p {
+        color: azure;
+        font-size: large;
+      }
+
+      h1,
+      h2,
+      h3,
+      h4,
+      h5,
+      h6 {
+        margin: auto;
+        font-family: Arial, Helvetica, sans-serif;
+        font-weight: bold;
+        text-align: center;
+      }
+
+      h2 {
+        color: black;
+      }
+
+      h3 {
+        font-size: larger;
+      }
+
+      #renewablebox,
+      #nonrenewablebox {
+        margin-top: 6rem;
+        border-radius: 1rem;
+        padding-top: 1rem;
+        padding-bottom: 1rem;
+        padding-right: 20px;
+        background-color: black;
+        width: 480px;
+        transform: scaleY(0.9);
+        transition-duration: 500ms;
+      }
+
+      #renewablebox:hover,
+      #nonrenewablebox:hover {
+        transform: scaleY(1);
+      }
+    </style>
+  </head>
+  <body>
+    <h1 style="width: 100vh">Renewable & Non Renewable Resources</h1>
+    <main>
+      <article class="renewable">
+        <h2>Renewable Resources</h2>
+        <div id="renewablebox">
+          <div id="renewable_advantages">
+            <h3>Advantages</h3>
+            <ul>
+              <li>
+                <p>
+                  They get renewed naturally, and hence we will never run out of
+                  renewable resources if used wisely.
+                </p>
+              </li>
+              <li>
+                <p>
+                  Generally renewable resources have a small carbon footprint,
+                  thus making them cleaner forms of energy.
+                </p>
+              </li>
+              <li>
+                <p>
+                  They are generally abundant, and hence easily accissible at
+                  many places.
+                </p>
+              </li>
+            </ul>
+          </div>
+          <div id="renewable_disadvantages">
+            <h3>Disadvantages</h3>
+            <ul>
+              <li>
+                <p>
+                  Some types of renewable resources require expensive technology
+                  to harness.
+                </p>
+              </li>
+              <li>
+                <p>They are not conventional resources.</p>
+              </li>
+              <li>
+                <p>
+                  Technology used to harness some renewable resources cause
+                  damage to bio-diversity.
+                </p>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </article>
+      <article class="non-renewable">
+        <h2>Non Renewable Resources</h2>
+        <div id="nonrenewablebox">
+          <div id="nonrenewable_advantages">
+            <h3>Advantages</h3>
+            <ul>
+              <li>
+                <p>
+                  Generally cheaper and harnessed on large scale as they are
+                  conventional resources.
+                </p>
+              </li>
+              <li>
+                <p>
+                  Non renewable resources which are fuels have high energy
+                  levels (calorific value).
+                </p>
+              </li>
+            </ul>
+          </div>
+          <div id="nonrenewable_disadvantages">
+            <h3>Disadvantages</h3>
+            <ul>
+              <li>
+                <p>
+                  They are limited in nature and take enourmous amounts of time
+                  to get renewed naturally.
+                </p>
+              </li>
+              <li>
+                <p>
+                  Generally they are not available everywhere and are extracted
+                  from few places around the world.
+                </p>
+              </li>
+              <li>
+                <p>
+                  They have a bigger carbon footprint and play a significant
+                  role in global greenhouse emissions as well as pollution.
+                </p>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </article>
+    </main>
+  </body>
+</html>
