@@ -14,20 +14,22 @@
         color: rgb(255, 255, 255);
         padding-right: 5rem;
         padding-left: 5rem;
-        margin: auto;
       }
       main {
         margin: auto;
         display: grid;
         gap: 5rem;
-        grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
+        grid-template-columns: repeat(auto-fit, minmax(72vh, 1fr));
         width: 100%;
+        justify-content: center;
+        align-items: center;
+        place-items: center;
       }
 
       article {
         display: flex;
         flex-direction: column;
-        width: 500px;
+        width: 72vh;
         align-items: center;
         justify-content: center;
         background-color: black;
@@ -88,9 +90,9 @@
         border-radius: 1rem;
         padding-top: 1rem;
         padding-bottom: 1rem;
-        padding-right: 20px;
+        padding-right: 2vh;
         background-color: black;
-        width: 480px;
+        width: 70vh;
         transform: scaleY(0.9);
         transition-duration: 500ms;
       }
@@ -102,7 +104,7 @@
     </style>
   </head>
   <body>
-    <h1 style="width: 100vh">Renewable & Non Renewable Resources</h1>
+    <h1>Renewable & Non Renewable Resources</h1>
     <main>
       <article class="renewable">
         <h2>Renewable Resources</h2>
